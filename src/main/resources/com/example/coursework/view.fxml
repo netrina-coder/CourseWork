@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.Controller">
+   <top>
+      <VBox prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="7.0" prefWidth="72.0" text="Меню" textFill="#2d03e7">
+               <VBox.margin>
+                  <Insets left="250.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="300.0" prefWidth="497.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="timeExceeds" mnemonicParsing="false" onAction="#timeLocalButton" prefHeight="26.0" prefWidth="466.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Відомості про абонентів, у яких час міських розмов перевищує заданий" textAlignment="CENTER" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#distanceCommunication" prefHeight="26.0" prefWidth="465.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Відомості про абонентів, які користувались міжміським зв'язком" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#rangeButton" prefHeight="26.0" prefWidth="465.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Відомості про абонентів чий номер рахунку знаходиться у вказаному діапазоні" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#listOfSubs" prefHeight="26.0" prefWidth="465.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Список абонентів, впорядкованих за номером рахунку" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addPhoneButton" prefHeight="26.0" prefWidth="465.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Додати абонента" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#removeButton" prefHeight="26.0" prefWidth="465.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Вилучити абонента" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showSubscribers" prefHeight="26.0" prefWidth="465.0" style="-fx-background-color: d8bfd8; -fx-border-color: black;" text="Показати всіх абонентів" textFill="#2d03e7">
+
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="295.0" prefWidth="818.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="resultText" prefHeight="200.0" prefWidth="300.0">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="80.0" right="330.0" top="150.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="80.0" />
+         </BorderPane.margin></VBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="256.0" prefWidth="230.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="timeForTownTalksField" promptText="введіть час міських розмов">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <TextField fx:id="startRangeField" promptText="введіть початок діапазону">
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="endRangeField" promptText="введіть кінець діапазону">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="IDField" promptText="введіть ID">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="surnameField" promptText="введіть прізвище">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="nameField" prefHeight="26.0" prefWidth="195.0" promptText="введіть ім'я">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="middlenameField" promptText="введіть по батькові">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="accountNumberField" promptText="введіть номер телефону">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="timeForTown" promptText="введіть час міських розмов">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="longDistanceCallTimeField" promptText="введіть час міжміських розмов">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="phoneID" promptText="введіть індекс абоненту">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" top="160.0" />
+         </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </right>
+</BorderPane>
